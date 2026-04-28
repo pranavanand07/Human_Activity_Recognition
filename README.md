@@ -31,3 +31,8 @@ The final model is a stacked Bi-Directional GRU built with TensorFlow/Keras:
 | **Sitting** | 0.89 | 0.78 | 0.83 |
 | **Standing** | 0.85 | 0.91 | 0.88 |
 | **Laying** | 0.99 | 0.97 | 0.98 |
+
+### 📈 Model Performance Analysis
+The Bi-GRU model achieved a strong balance between training and validation accuracy. 
+
+**Key Observation:** The model demonstrates high precision in dynamic activities (Walking, Stairs) but shows a slight bottleneck in distinguishing **Sitting** from **Standing**. This is a known challenge in HAR datasets where the static gravity vector is nearly identical for both activities. Future iterations could include a "Magnitude" feature calculation to improve static state separation.
